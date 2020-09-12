@@ -33,6 +33,7 @@ end
 def get_japanese_emoticon(path, emot)
   hash = load_library(path)
   hash.each do |key, value|
+    puts value.class
     if emot == value[:english]
       return value[:japanese]
     end
@@ -42,5 +43,5 @@ end
 
 
 #puts  get_english_meaning("./lib/emoticons.yml", "(Ｔ▽Ｔ)")
-#puts  get_japanese_emoticon("./lib/emoticons.yml", ":)")
+get_japanese_emoticon("./lib/emoticons.yml", ":)")
 #puts load_library("./lib/emoticons.yml")
